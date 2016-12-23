@@ -121,7 +121,7 @@ class controller
     {
         $this->user->add_lang_ext('pcgf/smiliecreator', 'smiliecreator');
         // Get the request variables
-        $text = utf8_normalize_nfc(htmlspecialchars($this->request->variable('text', '', true)));
+        $text = utf8_normalize_nfc(htmlspecialchars_decode($this->request->variable('text', '', true)));
         $smilie = $this->request->variable('smilie', 'random');
         $color = $this->request->variable('color', '000000');
         $shadow_color = $this->request->variable('scolor', '-');
