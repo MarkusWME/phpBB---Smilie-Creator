@@ -1,0 +1,32 @@
+{
+    "name": "pcgf/smiliecreator",
+    "type": "phpbb-extension",
+    "description": "An extension that allows to create smilie shields",
+    "homepage": "https://github.com/MarkusWME/phpBB---Smilie-Creator",
+    "version": "1.0.0",
+    "time": "2016-12-20",
+    "keywords": ["smilie", "shield", "smilie shield", "smilie creator"],
+    "license": "GPL-2.0",
+    "authors": [
+        {
+          "name": "MarkusWME",
+          "homepage": "https://github.com/MarkusWME",
+          "email": "markuswme@pcgamingfreaks.at",
+          "role": "Lead Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "extra": {
+        "display-name": "Smilie Creator",
+        "soft-require": {
+            "phpbb/phpbb": ">=3.1"
+        },
+        "version-check": {
+            "host": "api.pcgf.at",
+            "directory": "/phpbb",
+            "filename": "smiliecreator.json"
+        }
+    }
+}

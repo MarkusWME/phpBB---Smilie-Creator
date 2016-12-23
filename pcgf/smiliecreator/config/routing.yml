@@ -1,0 +1,6 @@
+pcgf_smiliecreator_get_creator:
+    path: /pcgf/smiliecreator
+    defaults: { _controller: pcgf.smiliecreator.controller:getSmilieCreator }
+pcgf_smiliecreator_get_shield:
+    path: /pcgf/getsmilieshield
+    defaults: { _controller: pcgf.smiliecreator.controller:getShield }

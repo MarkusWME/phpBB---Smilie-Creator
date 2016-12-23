@@ -1,0 +1,17 @@
+services:
+    pcgf.smiliecreator.listener:
+        class: pcgf\smiliecreator\event\listener
+        arguments:
+            - @user
+            - @template
+            - @controller.helper
+        tags:
+            - { name: event.listener }
+    pcgf.smiliecreator.controller:
+        class: pcgf\smiliecreator\controller\controller
+        arguments:
+            - @request
+            - @user
+            - @template
+            - @controller.helper
+            - %core.root_path%

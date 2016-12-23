@@ -1,0 +1,148 @@
+<!-- INCLUDECSS @pcgf_smiliecreator/smiliecreator.css -->
+<!-- INCLUDEJS @pcgf_smiliecreator/javascript/smiliecreator.js -->
+<!-- INCLUDE simple_header.html -->
+<script type="text/javascript">
+    var pcgfGetShieldLink = '{PCGF_SMILIECREATOR_GET_SHIELD_LINK}';
+</script>
+<div class="panel">
+    <div class="inner"><span class="corners-top"><span></span></span>
+        <h3>{L_PCGF_SMILIECREATOR}</h3>
+        <form action="" id="shield-creator">
+            <table cellpadding="4" cellspacing="1">
+                <tr>
+                    <td class="bg1">
+                        <strong>{L_PCGF_SMILIECREATOR_TEXT}{L_COLON}</strong>
+                    </td>
+                    <td class="bg2">
+                        <input id="pcgf-smiliecreator-shield-text" class="inputbox autowidth" type="text" name="shield-text" size="40"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg1">
+                        <strong>{L_PCGF_SMILIECREATOR_FONT_COLOR}{L_COLON}</strong>
+                    </td>
+                    <td class="bg2">
+                        <table>
+                            <tr>
+                                <td>
+                                    <select id="pcgf-smiliecreator-color" name="color">
+                                        <option style="color: #8B0000; background-color: #FFFFFF" value="8B0000">{L_PCGF_SMILIECREATOR_COLOR_DARK_RED}</option>
+                                        <option style="color: #FF0000; background-color: #FFFFFF" value="FF0000">{L_PCGF_SMILIECREATOR_COLOR_RED}</option>
+                                        <option style="color: #FFA500; background-color: #FFFFFF" value="FFA500">{L_PCGF_SMILIECREATOR_COLOR_ORANGE}</option>
+                                        <option style="color: #A52A2A; background-color: #FFFFFF" value="A52A2A">{L_PCGF_SMILIECREATOR_COLOR_BROWN}</option>
+                                        <option style="color: #FFFF00; background-color: #FFFFFF" value="FFFF00">{L_PCGF_SMILIECREATOR_COLOR_YELLOW}</option>
+                                        <option style="color: #008000; background-color: #FFFFFF" value="008000">{L_PCGF_SMILIECREATOR_COLOR_GREEN}</option>
+                                        <option style="color: #808000; background-color: #FFFFFF" value="808000">{L_PCGF_SMILIECREATOR_COLOR_OLIVE}</option>
+                                        <option style="color: #00FFFF; background-color: #FFFFFF" value="00FFFF">{L_PCGF_SMILIECREATOR_COLOR_CYAN}</option>
+                                        <option style="color: #0000FF; background-color: #FFFFFF" value="0000FF">{L_PCGF_SMILIECREATOR_COLOR_BLUE}</option>
+                                        <option style="color: #00008B; background-color: #FFFFFF" value="00008B">{L_PCGF_SMILIECREATOR_COLOR_DARK_BLUE}</option>
+                                        <option style="color: #4B0082; background-color: #FFFFFF" value="4B0082">{L_PCGF_SMILIECREATOR_COLOR_INDIGO}</option>
+                                        <option style="color: #EE82EE; background-color: #FFFFFF" value="EE82EE">{L_PCGF_SMILIECREATOR_COLOR_VIOLET}</option>
+                                        <option style="color: #FFFFFF; background-color: #000000" value="FFFFFF">{L_PCGF_SMILIECREATOR_COLOR_WHITE}</option>
+                                        <option style="color: #000000; background-color: #FFFFFF" value="000000" selected>{L_PCGF_SMILIECREATOR_COLOR_BLACK}</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg1">
+                        <strong>{L_PCGF_SMILIECREATOR_SHADOW_COLOR}{L_COLON}</strong>
+                    </td>
+                    <td class="bg2">
+                        <table>
+                            <tr>
+                                <td>
+                                    <select id="pcgf-smiliecreator-shadow-color" name="shadowcolor">
+                                        <option style="color: #8B0000; background-color: #FFFFFF" value="8B0000">{L_PCGF_SMILIECREATOR_COLOR_DARK_RED}</option>
+                                        <option style="color: #FF0000; background-color: #FFFFFF" value="FF0000">{L_PCGF_SMILIECREATOR_COLOR_RED}</option>
+                                        <option style="color: #FFA500; background-color: #FFFFFF" value="FFA500">{L_PCGF_SMILIECREATOR_COLOR_ORANGE}</option>
+                                        <option style="color: #A52A2A; background-color: #FFFFFF" value="A52A2A">{L_PCGF_SMILIECREATOR_COLOR_BROWN}</option>
+                                        <option style="color: #FFFF00; background-color: #FFFFFF" value="FFFF00">{L_PCGF_SMILIECREATOR_COLOR_YELLOW}</option>
+                                        <option style="color: #008000; background-color: #FFFFFF" value="008000">{L_PCGF_SMILIECREATOR_COLOR_GREEN}</option>
+                                        <option style="color: #808000; background-color: #FFFFFF" value="808000">{L_PCGF_SMILIECREATOR_COLOR_OLIVE}</option>
+                                        <option style="color: #00FFFF; background-color: #FFFFFF" value="00FFFF">{L_PCGF_SMILIECREATOR_COLOR_CYAN}</option>
+                                        <option style="color: #0000FF; background-color: #FFFFFF" value="0000FF">{L_PCGF_SMILIECREATOR_COLOR_BLUE}</option>
+                                        <option style="color: #00008B; background-color: #FFFFFF" value="00008B">{L_PCGF_SMILIECREATOR_COLOR_DARK_BLUE}</option>
+                                        <option style="color: #4B0082; background-color: #FFFFFF" value="4B0082">{L_PCGF_SMILIECREATOR_COLOR_INDIGO}</option>
+                                        <option style="color: #EE82EE; background-color: #FFFFFF" value="EE82EE">{L_PCGF_SMILIECREATOR_COLOR_VIOLET}</option>
+                                        <option style="color: #FFFFFF; background-color: #000000" value="FFFFFF">{L_PCGF_SMILIECREATOR_COLOR_WHITE}</option>
+                                        <option style="color: #000000; background-color: #FFFFFF" value="000000">{L_PCGF_SMILIECREATOR_COLOR_BLACK}</option>
+                                        <option style="color: #000000; background-color: #FFFFFF" value="-" selected>{L_PCGF_SMILIECREATOR_COLOR_NONE}</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg1">
+                        <strong>{L_PCGF_SMILIECREATOR_SHIELD_SHADOW}{L_COLON}</strong>
+                    </td>
+                    <td class="bg2">
+                        <table>
+                            <tr>
+                                <td>
+                                    <input id="pcgf-smiliecreator-shield-shadow" type="checkbox" name="shield-shadow"/>
+                                    <label for="pcgf-smiliecreator-shield-shadow">{L_PCGF_SMILIECREATOR_SHIELD_SHADOW_ON}</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg1">
+                        <strong>{L_PCGF_SMILIECREATOR_CHOOSE_SMILIE}{L_COLON}</strong>
+                    </td>
+                    <td class="bg2">
+                        <table>
+                            <tr>
+                                <!-- BEGIN smilie_selection -->
+                                    <!-- IF smilie_selection.NEXT_ROW -->
+                                        </tr>
+                                        <tr>
+                                    <!-- ELSE -->
+                                        <td>
+                                            <input id="pcgf-smilie-selection-{smilie_selection.SMILIE}" type="radio" class="radio" name="smilie" value="{smilie_selection.SMILIE}.{smilie_selection.FILE_EXTENSION}"/>
+                                            <label for="pcgf-smilie-selection-{smilie_selection.SMILIE}">
+                                                <img src="{PCGF_SMILIECREATOR_SMILIE_PATH}{smilie_selection.SMILIE}.{smilie_selection.FILE_EXTENSION}" alt="{L_PCGF_SMILIECREATOR_SMILIE} {smilie_selection.SMILIE}"/>
+                                            </label>
+                                        </td>
+                                    <!-- ENDIF -->
+                                <!-- END smilie_selection -->
+                            </tr>
+                            <tr>
+                                <td colspan="{PCGF_SMILIECREATOR_COLS}">
+                                    <input id="pcgf-smilie-random" type="radio" class="radio" name="smilie" value="random" checked="checked"/>
+                                    <label for="pcgf-smilie-random">{L_PCGF_SMILIECREATOR_RANDOM}</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg1">
+                        <strong>{L_PCGF_SMILIECREATOR_PREVIEW}{L_COLON}</strong>
+                    </td>
+                    <td class="bg2">
+                        <img id="pcgf-smiliecreator-preview" src="" alt="{L_PCGF_SMILIECREATOR_PREVIEW}"></img>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="{PCGF_SMILIECREATOR_WIDTH}">
+                        <br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="{PCGF_SMILIECREATOR_COLS}">
+                        <input id="pcgf-smiliecreator-create" type="button" class="button1" value="{L_PCGF_SMILIECREATOR_CREATE}"/>
+                        <input id="pcgf-smiliecreator-close" type="button" class="button2" value="{L_PCGF_SMILIECREATOR_CLOSE}"/>
+                        <br/><br/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+<!-- INCLUDE simple_footer.html -->

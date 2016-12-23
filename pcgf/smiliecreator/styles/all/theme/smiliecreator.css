@@ -1,0 +1,13 @@
+#shield-creator > table {
+    border: 0;
+    width: 100%;
+}
+
+#shield-creator > table tr td:first-child {
+    vertical-align: middle;
+}
+
+#shield-creator > table tr:last-child > td {
+    text-align: center;
+    vertical-align: middle;
+}
