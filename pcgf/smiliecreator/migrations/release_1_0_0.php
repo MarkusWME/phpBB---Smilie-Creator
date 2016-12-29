@@ -73,7 +73,7 @@ class release_1_0_0 extends migration
         $id = $db->sql_fetchrow($result);
         if ($id !== false)
         {
-            $id = $id['MAX(bbcode_id)'];
+            $id = $id['MAX(bbcode_id)'] + 1;
             while ($id <= NUM_CORE_BBCODES)
             {
                 $id++;

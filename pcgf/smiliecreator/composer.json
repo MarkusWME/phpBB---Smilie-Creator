@@ -3,8 +3,8 @@
     "type": "phpbb-extension",
     "description": "An extension that allows to create smilie shields",
     "homepage": "https://github.com/MarkusWME/phpBB---Smilie-Creator",
-    "version": "1.0.1",
-    "time": "2016-12-24",
+    "version": "1.0.2",
+    "time": "2016-12-29",
     "keywords": ["smilie", "shield", "smilie shield", "smilie creator"],
     "license": "GPL-2.0",
     "authors": [
