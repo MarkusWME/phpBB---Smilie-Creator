@@ -3,6 +3,8 @@ A phpBB extension that allows to create smilie shields. This extension is a port
 
 ## Features
 * Create custom smilie shields
+    * Smilie shields
+    * Smilie speechbubbles
 * Add new smilies anytime you like
     * Maximum size of 23 x 23 pixels
     * Possible file types: .png, .gif and .jpg
