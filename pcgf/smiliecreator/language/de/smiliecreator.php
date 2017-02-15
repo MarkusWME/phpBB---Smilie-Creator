@@ -45,5 +45,8 @@ $lang = array_merge($lang, array(
     'PCGF_SMILIECREATOR_SHIELD_SHADOW'    => 'Schild-Schatten',
     'PCGF_SMILIECREATOR_SHIELD_SHADOW_ON' => 'Aktiviert',
     'PCGF_SMILIECREATOR_SMILIE'           => 'Smilie',
+    'PCGF_SMILIECREATOR_STYLE'            => 'Design',
+    'PCGF_SMILIECREATOR_STYLE_SHIELD'     => 'Schild',
+    'PCGF_SMILIECREATOR_STYLE_BUBBLE'     => 'Sprechblase',
     'PCGF_SMILIECREATOR_TEXT'             => 'Schild-Text',
 ));

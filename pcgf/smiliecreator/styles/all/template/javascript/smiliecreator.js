@@ -2,6 +2,7 @@ var pcgfSmilieShieldPreview = $('#pcgf-smiliecreator-preview');
 var pcgfSmilieCreatorCreate = $('#pcgf-smiliecreator-create');
 var pcgfSmilieCreatorClose = $('#pcgf-smiliecreator-close');
 var pcgfSmilieCreatorText = $('#pcgf-smiliecreator-shield-text');
+var pcgfSmilieCreatorStyle = $('#pcgf-smiliecreator-style');
 var pcgfSmilieCreatorColor = $('#pcgf-smiliecreator-color');
 var pcgfSmilieCreatorShadowColor = $('#pcgf-smiliecreator-shadow-color');
 var pcgfSmilieCreatorShadow = $('#pcgf-smiliecreator-shield-shadow');
@@ -10,7 +11,13 @@ var pcgfSmilieCreatorMessage = $('#message', opener.document);
 function assignEventHandlers() {
     pcgfSmilieCreatorCreate.on('click', function() {
         // Add the shield BBCode when the button has been clicked
-        pcgfSmilieCreatorMessage.val(pcgfSmilieCreatorMessage.val() + '[shield=' + $('input[name=smilie]:checked').val() + ',' + (pcgfSmilieCreatorShadow.is(':checked') ? 1 : 0) + ',' + pcgfSmilieCreatorColor.val() + ',' + pcgfSmilieCreatorShadowColor.val() + ']' + pcgfSmilieCreatorText.val() + '[/shield]');
+        var styleTag = 'shield';
+        switch (pcgfSmilieCreatorStyle.val()) {
+            case 'bubble':
+                styleTag = 'speechbubble';
+                break;
+        }
+        pcgfSmilieCreatorMessage.val(pcgfSmilieCreatorMessage.val() + '[' + styleTag + '=' + $('input[name=smilie]:checked').val() + ',' + (pcgfSmilieCreatorShadow.is(':checked') ? 1 : 0) + ',' + pcgfSmilieCreatorColor.val() + ',' + pcgfSmilieCreatorShadowColor.val() + ']' + pcgfSmilieCreatorText.val() + '[/' + styleTag + ']');
         pcgfSmilieCreatorClose.trigger('click');
     });
     pcgfSmilieCreatorClose.on('click', function() {
@@ -19,6 +26,7 @@ function assignEventHandlers() {
     });
     // Refresh the smilie shield preview when something changes
     pcgfSmilieCreatorText.on('input', refreshPreview);
+    pcgfSmilieCreatorStyle.on('change', refreshPreview);
     pcgfSmilieCreatorColor.on('change', refreshPreview);
     pcgfSmilieCreatorShadowColor.on('change', refreshPreview);
     pcgfSmilieCreatorShadow.on('change', refreshPreview);
@@ -27,7 +35,7 @@ function assignEventHandlers() {
 
 function refreshPreview() {
     // Refresh smilie shield preview
-    pcgfSmilieShieldPreview.attr('src', pcgfGetShieldLink + '?text=' + escape(pcgfSmilieCreatorText.val()) + '&smilie=' + $('input[name=smilie]:checked').val() + '&color=' + pcgfSmilieCreatorColor.val() + '&scolor=' + pcgfSmilieCreatorShadowColor.val() + '&shadow=' + (pcgfSmilieCreatorShadow.is(':checked') ? 1 : 0));
+    pcgfSmilieShieldPreview.attr('src', pcgfGetShieldLink + '?style=' + pcgfSmilieCreatorStyle.val() + '&text=' + escape(pcgfSmilieCreatorText.val()) + '&smilie=' + $('input[name=smilie]:checked').val() + '&color=' + pcgfSmilieCreatorColor.val() + '&scolor=' + pcgfSmilieCreatorShadowColor.val() + '&shadow=' + (pcgfSmilieCreatorShadow.is(':checked') ? 1 : 0));
 }
 
 $(document).ready(function() {

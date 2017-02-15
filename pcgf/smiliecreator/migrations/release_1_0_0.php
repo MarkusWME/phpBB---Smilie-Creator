@@ -18,6 +18,7 @@ class release_1_0_0 extends migration
      *
      * @access public
      * @since  1.0.0
+     *
      * @return bool If the extension has been installed effectively
      */
     public function effectively_installed()
@@ -35,6 +36,7 @@ class release_1_0_0 extends migration
      *
      * @access public
      * @since  1.0.0
+     *
      * @return array Dependency data
      */
     static public function depends_on()
@@ -47,6 +49,7 @@ class release_1_0_0 extends migration
      *
      * @access public
      * @since  1.0.0
+     *
      * @return array Update information array
      */
     public function update_data()
@@ -61,7 +64,6 @@ class release_1_0_0 extends migration
      *
      * @access public
      * @since  1.0.0
-     * @return null
      */
     public function update_bbcode_data()
     {

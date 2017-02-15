@@ -18,6 +18,7 @@ class release_1_0_1 extends migration
      *
      * @access public
      * @since  1.0.1
+     *
      * @return array Dependency data
      */
     static public function depends_on()
@@ -30,6 +31,7 @@ class release_1_0_1 extends migration
      *
      * @access public
      * @since  1.0.1
+     *
      * @return array Revert information array
      */
     public function revert_data()
@@ -44,7 +46,6 @@ class release_1_0_1 extends migration
      *
      * @access public
      * @since  1.0.1
-     * @return null
      */
     public function delete_bbcode_data()
     {

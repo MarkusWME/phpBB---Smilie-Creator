@@ -8,18 +8,21 @@
 
 namespace pcgf\smiliecreator\event;
 
+use phpbb\controller\helper;
+use phpbb\template\template;
+use phpbb\user;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /** @version 1.0.0 */
 class listener implements EventSubscriberInterface
 {
-    /** @var \phpbb\user $user The user object */
+    /** @var user $user The user object */
     protected $user;
 
-    /** @var \phpbb\template\template $template The template object */
+    /** @var template $template The template object */
     protected $template;
 
-    /** @var \phpbb\controller\helper $helper The helper object */
+    /** @var helper $helper The helper object */
     protected $helper;
 
     /**
@@ -28,13 +31,11 @@ class listener implements EventSubscriberInterface
      * @access public
      * @since  1.0.0
      *
-     * @param \phpbb\user              $user     The user object
-     * @param \phpbb\template\template $template The template object
-     * @param \phpbb\controller\helper $helper   The helper object
-     *
-     * @return \pcgf\smiliecreator\event\listener The listener object of the extension
+     * @param user     $user     The user object
+     * @param template $template The template object
+     * @param helper   $helper   The helper object
      */
-    public function __construct(\phpbb\user $user, \phpbb\template\template $template, \phpbb\controller\helper $helper)
+    public function __construct(user $user, template $template, helper $helper)
     {
         $this->user = $user;
         $this->template = $template;
@@ -62,12 +63,8 @@ class listener implements EventSubscriberInterface
      *
      * @access public
      * @since  1.0.0
-     *
-     * @param $event The event parameter array
-     *
-     * @return null
      */
-    public function setup_template_data($event)
+    public function setup_template_data()
     {
         $this->user->add_lang_ext('pcgf/smiliecreator', 'smiliecreator');
         $this->template->assign_vars(array(
