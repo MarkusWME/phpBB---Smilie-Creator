@@ -1,6 +1,6 @@
 var pcgfOpenSmilieCreatorButton = $('#pcgf-smiliecreator-create');
 
-function assignEventHandlers() {
+function assignPCGFSmiliecreatorEventHandlers() {
     // Append the event handler to the button
     pcgfOpenSmilieCreatorButton.on('click', function() {
         window.open(pcgfSmilieCreatorLink, '_pcgf_smiliecreator', 'width=400,height=500,menubar=no,resizable=yes,scrollbars=yes,titlebar=yes,toolbar=no');
@@ -8,5 +8,5 @@ function assignEventHandlers() {
 }
 
 $(document).ready(function() {
-    assignEventHandlers();
+    assignPCGFSmiliecreatorEventHandlers();
 });
