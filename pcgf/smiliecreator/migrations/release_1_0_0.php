@@ -2,7 +2,7 @@
 
 /**
  * @author    MarkusWME <markuswme@pcgamingfreaks.at>
- * @copyright 2016 MarkusWME
+ * @copyright 2016, 2017 MarkusWME
  * @license   http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
  */
 
@@ -10,7 +10,7 @@ namespace pcgf\smiliecreator\migrations;
 
 use phpbb\db\migration\migration;
 
-/** @version 1.0.0 */
+/** @version 1.1.2 */
 class release_1_0_0 extends migration
 {
     /**
@@ -28,7 +28,9 @@ class release_1_0_0 extends migration
                   FROM ' . BBCODES_TABLE . '
                   WHERE bbcode_tag = "shield"';
         $result = $db->sql_query($query);
-        return $db->sql_fetchrow($result) !== false;
+        $is_installed = $db->sql_fetchrow($result) !== false;
+        $db->sql_freeresult($result);
+        return $is_installed;
     }
 
     /**

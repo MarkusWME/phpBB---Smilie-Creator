@@ -2,7 +2,7 @@
 
 /**
  * @author    MarkusWME <markuswme@pcgamingfreaks.at>
- * @copyright 2016 MarkusWME
+ * @copyright 2016, 2017 MarkusWME
  * @license   http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
  */
 
@@ -14,7 +14,7 @@ use phpbb\template\template;
 use phpbb\user;
 use Symfony\Component\HttpFoundation\Response;
 
-/** @version 1.1.0 */
+/** @version 1.1.2 */
 class controller
 {
     /** @const Max smilie count for one row */
@@ -70,7 +70,7 @@ class controller
      *
      * @return \Symfony\Component\HttpFoundation\Response Rendered smilie creator page
      */
-    public function getSmilieCreator()
+    public function get_smilie_creator()
     {
         $this->user->add_lang_ext('pcgf/smiliecreator', 'smiliecreator');
         $smilie_handle = opendir($this->phpbb_root_path . 'ext/pcgf/smiliecreator/styles/all/theme/images/');
@@ -118,11 +118,11 @@ class controller
      *
      * @return \Symfony\Component\HttpFoundation\Response Rendered smilie shield image
      */
-    public function getShield()
+    public function get_shield()
     {
         $this->user->add_lang_ext('pcgf/smiliecreator', 'smiliecreator');
         // Get the request variables
-        $text = utf8_normalize_nfc(htmlspecialchars_decode($this->request->variable('text', '', true)));
+        $text = htmlspecialchars_decode($this->request->variable('text', '', true));
         $style = $this->request->variable('style', 'shield');
         $smilie = $this->request->variable('smilie', 'random');
         $color = $this->request->variable('color', '000000');
